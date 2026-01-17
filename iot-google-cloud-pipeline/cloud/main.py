@@ -25,7 +25,7 @@ def subscribe(cloud_event):
             json_data['status'] = "OK"
 
 
-        # 4. Add Timestamp (This fixes the sorting issue!)
+        # 4. Add Timestamp 
         json_data['timestamp'] = firestore.SERVER_TIMESTAMP
        
         # 5. Print Debug Info (UPDATED NAME HERE)
@@ -40,4 +40,5 @@ def subscribe(cloud_event):
        
     except Exception as e:
         print(f"ERROR: {e}")
+
 
