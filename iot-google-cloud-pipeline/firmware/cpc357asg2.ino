@@ -4,8 +4,8 @@
 
 
 // --- CONFIGURATION ---
-const char* ssid = "iPhone";        // <--- REPLACE
-const char* password = "meow";    // <--- REPLACE
+const char* ssid = "x";        // <--- REPLACE with  ssid
+const char* password = "x";    // <--- REPLACE with password wifi/hotspot, hidden here for security 
 const char* mqtt_server = "34.123.184.50";   // <--- REPLACE WITH VM EXTERNAL IP
 
 
@@ -83,3 +83,4 @@ void loop() {
 
   delay(5000); // Wait 5 seconds
 }
+
