@@ -157,11 +157,11 @@ pip3 install paho-mqtt google-cloud-pubsub
 
  d. Security Key: 
  
-     Download your Service Account Key (JSON) from Google Cloud IAM.
+   Download your Service Account Key (JSON) from Google Cloud IAM.
   
-    Rename it to key.json.
+   Rename it to key.json.
 
-    Upload it to the same directory as bridge.py.
+   Upload it to the same directory as bridge.py.
 
   e. Run the Bridge:
 
@@ -176,9 +176,9 @@ python3 bridge.py
 
   b. Cloud Run:
 
-    Navigate to the cloud/ folder.
+   Navigate to the cloud/ folder.
 
-    Deploy the function using the gcloud CLI:
+   Deploy the function using the gcloud CLI:
 
 ```bash
 gcloud run deploy save-to-firestore \
