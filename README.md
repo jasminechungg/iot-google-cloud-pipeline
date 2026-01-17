@@ -109,6 +109,8 @@ Connect the components to the Cytron Maker Feather S3 as follows:
 
 ## ⚙️ Setup & Installation Guide
 
+
+
 1. Edge Node Setup (Firmware)
    
   a. Navigate to the firmware/ folder.
@@ -132,8 +134,8 @@ const char* mqtt_server = "YOUR_VM_EXTERNAL_IP";
 ```
 
   e. Upload the code to your ESP32 board.
-  
 
+  
 2. Gateway Setup (Virtual Machine)
 
   a. SSH into your Google Compute Engine VM.
@@ -168,6 +170,7 @@ python3 bridge.py
 ```
 
 
+
 3. Cloud Backend Deployment
   a. Pub/Sub: Create a topic named sensor-data-topic.
 
@@ -191,6 +194,8 @@ gcloud run deploy save-to-firestore \
 ---
 
 ## 📊 Usage & Verification
+
+
 1. Monitor Edge: Open the Arduino Serial Monitor (Baud 115200). You should see:
 
 ```text
@@ -198,12 +203,14 @@ Connecting to WiFi... Connected!
 Sending: {"id":"truck_1", "temp":31.5, ...}
 ```
 
+
 2. Monitor Gateway: On the VM, the bridge.py script will output:
 
 ```text
 Received from ESP32: {...}
 -> Sent to Google Cloud: MessageID_12345
 ```
+
 
 3. Verify Cloud: Go to the Firestore Console. A new document should appear in the data_logs collection every few seconds with the status "HOT" or "OK".
 
