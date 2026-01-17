@@ -7,6 +7,13 @@ An Edge-to-Cloud IoT solution for smart cold chain monitoring using ESP32, MQTT,
 
 ---
 
+## 👥 Team Members
+Ain Nabihah Binti Mahamad Chah Pari (162321)
+
+Jasmine Binti Mohd Shaiful Adli Chung (164191)
+
+---
+
 ## 📌 Project Overview
 This project implements a complete **Edge-to-Cloud IoT pipeline** designed for **Food Supply Chain Logistics**. It monitors the real-time environmental conditions (temperature & humidity) and geospatial location of refrigerated delivery trucks to prevent food spoilage and ensure safety compliance.
 
@@ -52,6 +59,8 @@ The system follows a 3-tier IoT architecture:
  ┃ ┗ 📜 requirements.txt      # Python dependencies for Cloud Run
  ┗ 📜 README.md               # Project documentation
 ```
+---
+
 ## 🛠️ Hardware & Software Requirements
 **Hardware**
 * Cytron Maker Feather S3 (or any ESP32 board)
@@ -79,6 +88,8 @@ The system follows a 3-tier IoT architecture:
 
 * Gateway: Eclipse Mosquitto MQTT Broker
 
+---
+
 ## 🔌 Hardware Setup (Wiring)
 
 Connect the components to the Cytron Maker Feather S3 as follows:
@@ -93,6 +104,8 @@ Connect the components to the Cytron Maker Feather S3 as follows:
 | **GPS Module** | `GND` | Ground |
 
 > **Note:** The current firmware includes logic to simulate GPS coordinates if no satellite signal is found (useful for indoor testing).
+
+---
 
 ## ⚙️ Setup & Installation Guide
 
@@ -175,6 +188,8 @@ gcloud run deploy save-to-firestore \
 
   c. Eventarc: Create an Eventarc trigger to link the Pub/Sub topic to the Cloud Run service.
 
+---
+
 ## 📊 Usage & Verification
 1. Monitor Edge: Open the Arduino Serial Monitor (Baud 115200). You should see:
 
@@ -192,10 +207,7 @@ Received from ESP32: {...}
 
 3. Verify Cloud: Go to the Firestore Console. A new document should appear in the data_logs collection every few seconds with the status "HOT" or "OK".
 
-## 👥 Team Members
-Ain Nabihah Binti Mahamad Chah Pari (162321)
-
-Jasmine Binti Mohd Shaiful Adli Chung (164191)
+---
 
 ## 📄 License
 This project was developed for the CPC357: IoT Architecture & Smart Applications course at Universiti Sains Malaysia (USM).
