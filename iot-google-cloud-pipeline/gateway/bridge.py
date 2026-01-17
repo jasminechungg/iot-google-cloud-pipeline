@@ -7,8 +7,8 @@ import paho.mqtt.client as mqtt
 # --- CONFIGURATION ---
 # 1. Google Cloud Settings
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
-project_id = "cpc357-481611"  # <--- REPLACE WITH YOUR PROJECT ID
-topic_id = "sensor-data-topic"  # The topic you created earlier
+project_id = "cpc357-481611"  # <--- PROJECT ID
+topic_id = "sensor-data-topic"  #  topic created 
 
 # 2. MQTT Settings (Internal)
 MQTT_BROKER = "localhost"
@@ -45,4 +45,5 @@ client.on_message = on_message
 
 print("Starting IoT Bridge...")
 client.connect(MQTT_BROKER, 1883, 60)
+
 client.loop_forever()
