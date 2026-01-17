@@ -79,7 +79,23 @@ The system follows a 3-tier IoT architecture:
 
 * Gateway: Eclipse Mosquitto MQTT Broker
 
+## 🔌 Hardware Setup (Wiring)
+
+Connect the components to the Cytron Maker Feather S3 as follows:
+
+| Component | ESP32 Pin | Description |
+| :--- | :--- | :--- |
+| **DHT11 Sensor** | `GPIO 5` | Signal / Data Pin |
+| **DHT11 Sensor** | `3.3V` | VCC (Power) |
+| **DHT11 Sensor** | `GND` | Ground |
+| **GPS Module** | `RX` / `TX` | UART Serial (if using hardware GPS) |
+| **GPS Module** | `3.3V` | VCC |
+| **GPS Module** | `GND` | Ground |
+
+> **Note:** The current firmware includes logic to simulate GPS coordinates if no satellite signal is found (useful for indoor testing).
+
 ## ⚙️ Setup & Installation Guide
+
 1. Edge Node Setup (Firmware)
    
   a. Navigate to the firmware/ folder.
@@ -103,6 +119,7 @@ const char* mqtt_server = "YOUR_VM_EXTERNAL_IP";
 ```
 
   e. Upload the code to your ESP32 board.
+  
 
 2. Gateway Setup (Virtual Machine)
 
@@ -136,6 +153,7 @@ pip3 install paho-mqtt google-cloud-pubsub
 ```bash
 python3 bridge.py
 ```
+
 
 3. Cloud Backend Deployment
   a. Pub/Sub: Create a topic named sensor-data-topic.
