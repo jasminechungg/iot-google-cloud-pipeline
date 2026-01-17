@@ -79,7 +79,7 @@ The system follows a 3-tier IoT architecture:
 
 * Gateway: Eclipse Mosquitto MQTT Broker
 
-##⚙️ Setup & Installation Guide
+## ⚙️ Setup & Installation Guide
 1. Edge Node Setup (Firmware)
    
   a. Navigate to the firmware/ folder.
@@ -174,10 +174,10 @@ Received from ESP32: {...}
 
 3. Verify Cloud: Go to the Firestore Console. A new document should appear in the data_logs collection every few seconds with the status "HOT" or "OK".
 
-##👥 Team Members
+## 👥 Team Members
 Ain Nabihah Binti Mahamad Chah Pari (162321)
 
 Jasmine Binti Mohd Shaiful Adli Chung (164191)
 
-##📄 License
+## 📄 License
 This project was developed for the CPC357: IoT Architecture & Smart Applications course at Universiti Sains Malaysia (USM).
